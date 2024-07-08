@@ -20,6 +20,10 @@ def data(id_usuarios):
 def index():
     return render_template('login.html')
 
+@app.route('/select_dificultad')
+def select_dificultad():
+    return render_template('select_dificultad.html')
+
 @app.route('/login', methods=['POST'])
 def login():
     nombre = request.form.get('nombre')
@@ -31,6 +35,10 @@ def login():
     session['usuario_id'] = usuario.id
     return redirect(url_for('select_dificultad'))
 
+@app.route('/ranking')
+def ranking():
+    puntuaciones = Puntuacion.query.order_by(Puntuacion.puntos.desc()).all()
+    return render_template('ranking.html', puntuaciones=puntuaciones)
 
 if __name__ == '__main__':
     db.init_app(app)
