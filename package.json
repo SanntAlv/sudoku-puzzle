@@ -1,0 +1,23 @@
+{
+  "name": "sudoku-puzzle",
+  "version": "1.0.0",
+  "description": "sudoku-puzzle:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanntAlv/sudoku-puzzle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SanntAlv/sudoku-puzzle/issues"
+  },
+  "homepage": "https://github.com/SanntAlv/sudoku-puzzle#readme",
+  "dependencies": {
+    "sudoku-gen": "^1.0.2"
+  }
+}
